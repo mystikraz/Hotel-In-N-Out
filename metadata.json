@@ -1,0 +1,6 @@
+{
+  "name": "Hotel In N Out - Balaju, Kathmandu",
+  "description": "Official website for Hotel In N Out on Machhapokhari Ring Road, Balaju, Kathmandu, Nepal. Comfortable modern rooms, on-site restaurant and bar, 24/7 front desk, and warm Nepalese hospitality.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
