@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Search, Calendar, User, Phone, CheckCircle, BedDouble, AlertCircle } from 'lucide-react';
 import { BookingDetails, Currency } from '../types';
 import { formatPrice } from '../utils/formatters';
+import { HotelLogo } from './HotelLogo';
 
 interface BookingLookupModalProps {
   isOpen: boolean;
@@ -53,13 +54,16 @@ export const BookingLookupModal: React.FC<BookingLookupModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
       <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden border border-stone-200">
         <div className="bg-stone-900 text-white px-6 py-4 flex items-center justify-between border-b border-stone-800">
-          <div>
-            <div className="text-xs uppercase tracking-wider text-amber-400 font-semibold">
-              Hotel In N Out • Kathmandu
+          <div className="flex items-center gap-3.5">
+            <HotelLogo variant="mark" size="sm" />
+            <div>
+              <div className="text-xs uppercase tracking-wider text-cyan-400 font-semibold">
+                In N Out HOTEL • Kathmandu
+              </div>
+              <h3 className="font-serif text-lg font-bold text-white">
+                Retrieve Your Reservation
+              </h3>
             </div>
-            <h3 className="font-serif text-lg font-bold text-white">
-              Retrieve Your Reservation
-            </h3>
           </div>
           <button
             onClick={onClose}

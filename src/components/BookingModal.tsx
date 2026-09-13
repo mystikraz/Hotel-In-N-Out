@@ -3,6 +3,7 @@ import { X, Calendar, User, Mail, Phone, Plane, CheckCircle2, ShieldCheck, Downl
 import { HOTEL_INFO, ROOMS, ADDON_OPTIONS } from '../data/hotelData';
 import { Currency, BookingDetails } from '../types';
 import { formatPrice, getNightsBetween, getDefaultDates } from '../utils/formatters';
+import { HotelLogo } from './HotelLogo';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -130,13 +131,16 @@ export const BookingModal: React.FC<BookingModalProps> = ({
       <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden my-6 border border-stone-200">
         {/* Header Bar */}
         <div className="bg-stone-900 text-white px-6 py-4 flex items-center justify-between border-b border-stone-800">
-          <div>
-            <div className="text-xs uppercase tracking-wider text-amber-400 font-semibold">
-              Hotel In N Out • Online Reservation
+          <div className="flex items-center gap-4">
+            <HotelLogo variant="mark" size="sm" />
+            <div>
+              <div className="text-xs uppercase tracking-wider text-cyan-400 font-semibold">
+                In N Out HOTEL • Online Reservation
+              </div>
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-white">
+                {step === 4 ? 'Booking Confirmed' : 'Reserve Your Stay in Kathmandu'}
+              </h3>
             </div>
-            <h3 className="font-serif text-xl font-bold text-white">
-              {step === 4 ? 'Booking Confirmed' : 'Reserve Your Stay in Kathmandu'}
-            </h3>
           </div>
           <button
             onClick={onClose}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Phone, MapPin, Star, Menu, X, Calendar, Search, Sparkles } from 'lucide-react';
 import { HOTEL_INFO } from '../data/hotelData';
 import { Currency } from '../types';
+import { HotelLogo } from './HotelLogo';
 
 interface NavbarProps {
   currency: Currency;
@@ -102,18 +103,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo & Hotel Identity */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-stone-900 text-amber-400 flex items-center justify-center font-serif text-lg font-bold border border-stone-800 group-hover:border-amber-500/50 transition-colors shadow-sm">
-              I&O
-            </div>
-            <div>
-              <div className="font-serif text-xl font-bold tracking-tight text-stone-900 group-hover:text-amber-900 transition-colors leading-tight">
-                Hotel In N Out
-              </div>
-              <div className="text-[11px] font-medium tracking-wider uppercase text-stone-500">
-                Balaju • Kathmandu, Nepal
-              </div>
-            </div>
+          <a href="#" className="flex items-center group">
+            <HotelLogo variant="full" theme="light" size="md" subtitle="Machhapokhari Ring Road, Balaju" />
           </a>
 
           {/* Desktop Nav */}

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Utensils, Coffee, Clock, Heart, Sparkles } from 'lucide-react';
+import { Utensils, Coffee, Clock, Heart, Sparkles, Wine } from 'lucide-react';
 import { MENU_ITEMS } from '../data/hotelData';
 import { Currency } from '../types';
 import { formatPrice } from '../utils/formatters';
+import { HotelLogo } from './HotelLogo';
 
 interface DiningSectionProps {
   currency: Currency;
@@ -34,8 +35,27 @@ export const DiningSection: React.FC<DiningSectionProps> = ({ currency }) => {
             Hotel In N Out Restaurant & Bar
           </h2>
           <p className="text-stone-600 text-base mt-3 leading-relaxed">
-            Savor freshly prepared meals using organic vegetables and spices sourced from the Kathmandu valley. From steaming hot momos to wholesome Dal Bhat and rich Himalayan pour-over coffee.
+            Savor freshly prepared meals using organic vegetables and spices sourced from the Kathmandu valley. From steaming hot momos to wholesome Dal Bhat, rich Himalayan pour-over coffee, and evening drinks at our dedicated bar.
           </p>
+
+          {/* Authentic On-Site Bar & Lounge Spotlight */}
+          <div className="mt-8 p-6 rounded-2xl bg-stone-950 text-white border border-stone-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 text-left relative overflow-hidden">
+            <div className="space-y-2 relative z-10 max-w-xl">
+              <div className="flex items-center gap-2 text-cyan-400 text-xs font-bold uppercase tracking-wider">
+                <Wine className="w-4 h-4" />
+                <span>Verified On-Site Amenity</span>
+              </div>
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-white tracking-tight">
+                In N Out Bar & Lounge
+              </h3>
+              <p className="text-stone-300 text-xs sm:text-sm leading-relaxed">
+                Unwind after a day exploring Kathmandu at our custom timber-slat bar counter. Enjoy an illuminated spirits showcase, chilled Nepali beers (Gorkha, Tuborg, Everest), classic spirits, and evening mocktails.
+              </p>
+            </div>
+            <div className="shrink-0 relative z-10">
+              <HotelLogo variant="signboard" />
+            </div>
+          </div>
 
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center justify-center gap-2 mt-8">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, MessageCircle, Star, ExternalLink, Heart } from 'lucide-react';
 import { HOTEL_INFO } from '../data/hotelData';
+import { HotelLogo } from './HotelLogo';
 
 export const Footer: React.FC = () => {
   return (
@@ -9,17 +10,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Col 1: Brand & Overview */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-500 text-stone-950 font-serif font-bold text-lg flex items-center justify-center">
-                I&O
-              </div>
-              <div>
-                <span className="font-serif text-lg font-bold text-white block">
-                  Hotel In N Out
-                </span>
-                <span className="text-[11px] text-stone-400">Machhapokhari Ring Road • Balaju, Kathmandu</span>
-              </div>
-            </div>
+            <HotelLogo variant="full" theme="dark" size="md" subtitle="Machhapokhari Ring Road • Balaju" />
 
             <p className="text-stone-400 text-xs leading-relaxed">
               Warm Nepalese hospitality, comfortable modern rooms, authentic dining, and convenient Ring Road connectivity on Machhapokhari Ring Road, Balaju, Kathmandu.
